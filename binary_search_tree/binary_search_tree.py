@@ -17,17 +17,17 @@ class BinarySearchTree:
                 self.left = BinarySearchTree(value)
 
     def contains(self, target):
-        if value == self.value:
+        if target == self.value:
             return True
 
-        if value > self.value:
+        if target > self.value:
             if self.right:
-                self.right.contains(value)
+                return self.right.contains(target)
             else:
                 return False
-        elif value < self.value:
+        elif target < self.value:
             if self.left:
-                self.left.contains(value)
+                return self.left.contains(target)
             else:
                 return False
 
