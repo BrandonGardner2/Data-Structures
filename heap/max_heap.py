@@ -27,7 +27,7 @@ class Heap:
         return len(self.storage)
 
     def _bubble_up(self, index):
-        parent = index//2
+        parent = (index - 1)//2
         if index <= 0:
             return
         elif self.storage[index] > self.storage[parent]:
